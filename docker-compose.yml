@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  DatabaseCont:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: vhgt
+    ports: 
+    - 5432:5432
+  myapicont:
+    image: newimage
+    build: MyAPI
+    ports:
+    - 8080:80
